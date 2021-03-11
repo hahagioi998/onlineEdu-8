@@ -54,10 +54,10 @@ feign:
 weixin:
   pay:
     #关联的公众号appid
-    appId: wx74862e0dfcf69954 #wxf913bfa3a2c7eeeb
+    appId: XXXX
     #商户号
-    partner: 1558950191 #1543338551
+    partner: XXXX
     #商户key
-    partnerKey: T6m9iK73b0kn9g5v426MKfHQH7X8rKwb #atguigu3b0kn9g5v426MKfHQH7X8rKwb
+    partnerKey: XXXXX
     #回调地址
-    notifyUrl: http://imhelen.free.idcfengye.com/api/trade/weixin-pay/callback/notify
+    notifyUrl: XXXX
