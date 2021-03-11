@@ -39,9 +39,9 @@ spring:
 #阿里云短信
 aliyun:
   sms:
-    regionId: cn-hangzhou
-    keyId: LTAI4GDNby7tMtVWEwfqem6T
-    keySecret: X4O8nc7ohoHemdv1vyGdswsGV5ysjf
-    templateCode: SMS_198671346
-    signName: 小陈温馨提醒
+    regionId: xxx
+    keyId: xxxx
+    keySecret: xxxx
+    templateCode: xxx
+    signName: xxxx
 
