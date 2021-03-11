@@ -41,8 +41,8 @@ mybatis-plus:
 wx:
   open:
     # 微信开放平台 appid
-    appId: wxed9954c01bb89b47
+    appId: xxx
     # 微信开放平台 appsecret
-    appSecret: a7482517235173ddb4083788de60b90e
+    appSecret: xxx
     # 微信开放平台 重定向url（guli.shop需要在微信开放平台配置）
-    redirectUri: http://guli.shop/api/ucenter/wx/callback8160
+    redirectUri: xxxx
