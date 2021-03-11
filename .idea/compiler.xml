@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="USE_RELEASE_OPTION" value="false" />
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="service_vod" />
+        <module name="service_sms" />
+        <module name="api_gateway" />
+        <module name="service_oss" />
+        <module name="service_base" />
+        <module name="service_ucenter" />
+        <module name="service_cms" />
+        <module name="service_statistics" />
+        <module name="service_edu" />
+        <module name="service_trade" />
+        <module name="common_util" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="api_gateway" target="1.8" />
+      <module name="common" target="1.8" />
+      <module name="common_util" target="1.8" />
+      <module name="edu_parent" target="1.8" />
+      <module name="infrastructure" target="1.8" />
+      <module name="service" target="1.8" />
+      <module name="service_base" target="1.8" />
+      <module name="service_cms" target="1.8" />
+      <module name="service_edu" target="1.8" />
+      <module name="service_oss" target="1.8" />
+      <module name="service_sms" target="1.8" />
+      <module name="service_statistics" target="1.8" />
+      <module name="service_trade" target="1.8" />
+      <module name="service_ucenter" target="1.8" />
+      <module name="service_vod" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api_gateway" options="-parameters" />
+      <module name="common" options="-parameters" />
+      <module name="common_util" options="-parameters" />
+      <module name="edu_parent" options="-parameters" />
+      <module name="infrastructure" options="-parameters" />
+      <module name="service_base" options="-parameters" />
+      <module name="service_cms" options="-parameters" />
+      <module name="service_edu" options="-parameters" />
+      <module name="service_oss" options="-parameters" />
+      <module name="service_sms" options="-parameters" />
+      <module name="service_statistics" options="-parameters" />
+      <module name="service_trade" options="-parameters" />
+      <module name="service_ucenter" options="-parameters" />
+      <module name="service_vod" options="-parameters" />
+    </option>
+  </component>
+</project>

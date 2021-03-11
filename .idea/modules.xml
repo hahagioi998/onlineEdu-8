@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/infrastructure/api_gateway/api_gateway.iml" filepath="$PROJECT_DIR$/infrastructure/api_gateway/api_gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common_util/common_util.iml" filepath="$PROJECT_DIR$/common/common_util/common_util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/edu_parent.iml" filepath="$PROJECT_DIR$/edu_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/infrastructure/infrastructure.iml" filepath="$PROJECT_DIR$/infrastructure/infrastructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service/service.iml" filepath="$PROJECT_DIR$/service/service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/service_base/service_base.iml" filepath="$PROJECT_DIR$/common/service_base/service_base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service/service_cms/service_cms.iml" filepath="$PROJECT_DIR$/service/service_cms/service_cms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service/service_edu/service_edu.iml" filepath="$PROJECT_DIR$/service/service_edu/service_edu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service/service_oss/service_oss.iml" filepath="$PROJECT_DIR$/service/service_oss/service_oss.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service/service_sms/service_sms.iml" filepath="$PROJECT_DIR$/service/service_sms/service_sms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service/service_statistics/service_statistics.iml" filepath="$PROJECT_DIR$/service/service_statistics/service_statistics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service/service_trade/service_trade.iml" filepath="$PROJECT_DIR$/service/service_trade/service_trade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service/service_ucenter/service_ucenter.iml" filepath="$PROJECT_DIR$/service/service_ucenter/service_ucenter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service/service_vod/service_vod.iml" filepath="$PROJECT_DIR$/service/service_vod/service_vod.iml" />
+    </modules>
+  </component>
+</project>

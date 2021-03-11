@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.online.edu.service.edu.mapper.CourseMapper">
+   <!-- CONVERT(c.price, DECIMAL(8,2)) AS price, 前端要求后端传两位小数，后端做修改保留两位小数。
+   DECIMAL(8,2)8+2为数据库中设置数据长度，2是小数保留的位数，8是数据剩余长度-->
+    <sql id="columns">
+       c.id,
+       c.title,
+       c.lesson_num as lessonNum,
+       CONVERT(c.price, DECIMAL(8,2)) AS price,
+       c.cover,
+       c.buy_count as buyCount,
+       c.view_count as viewCount,
+       c.status,
+       c.gmt_create as gmtCreate ,
+       t.name as teacherName,
+       s1.title AS subjectParentTitle,
+       s2.title AS subjectTitle
+    </sql>
+
+    <sql id="tables">
+        edu_course c
+        left JOIN edu_teacher t on c.teacher_id = t.id
+        left JOIN edu_subject s1 on c.subject_parent_id=s1.id
+        left JOIN edu_subject s2 on c.subject_id = s2.id
+    </sql>
+
+    <select id="selectPageByCourseQueryVo" resultType="com.online.edu.service.edu.entity.vo.CourseVo">
+      select
+      <include refid="columns"/>
+      from
+      <include refid="tables"/>
+      ${ew.customSqlSegment}
+    </select>
+
+    <select id="selectCoursePublishVoById" resultType="com.online.edu.service.edu.entity.vo.CoursePublishVo">
+     select
+       c.id,
+       c.title,
+       c.lesson_num as lessonNum,
+       CONVERT(c.price, DECIMAL(8,2)) AS price,
+       c.cover,
+       c.status,
+       t.name as teacherName,
+       s1.title AS subjectParentTitle,
+       s2.title AS subjectTitle
+        FROM
+        <include refid="tables"/>
+        where c .id = #{id}
+    </select>
+    <select id="selectWebCourseVoById" resultType="com.online.edu.service.edu.entity.vo.WebCourseVo">
+        SELECT
+        c.id,
+        c.title,
+        c.cover,
+        CONVERT(c.price, DECIMAL(8,2)) AS price,
+        c.lesson_num AS lessonNum,
+        c.buy_count AS buyCount,
+        c.view_count AS viewCount,
+        cd.description,
+        t.id AS teacherId,
+        t.name AS teacherName,
+        t.intro,
+        t.avatar,
+        s1.id AS subjectLevelOneId,
+        s1.title AS subjectLevelOne,
+        s2.id AS subjectLevelTwoId,
+        s2.title AS subjectLevelTwo
+        FROM
+        edu_course c
+        LEFT JOIN edu_course_description cd ON c.id = cd.id
+        LEFT JOIN edu_teacher t ON c.teacher_id = t.id
+        LEFT JOIN edu_subject s1 ON c.subject_parent_id = s1.id
+        LEFT JOIN edu_subject s2 ON c.subject_id = s2.id
+        WHERE
+        c.id = #{id}
+    </select>
+
+
+    <select id="selectCourseDtoById" resultType="com.online.edu.service.base.dto.CourseDto">
+        SELECT
+        c.id,
+        c.title,
+        CONVERT(c.price, DECIMAL(8,2)) AS price,
+        c.cover,
+        t.name AS teacherName
+
+        FROM
+        edu_course c
+        LEFT JOIN edu_teacher t ON c.teacher_id = t.id
+        WHERE
+        c.id = #{id}
+    </select>
+
+</mapper>

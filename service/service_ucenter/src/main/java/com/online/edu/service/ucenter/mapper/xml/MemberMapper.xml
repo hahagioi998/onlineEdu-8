@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.online.edu.service.ucenter.mapper.MemberMapper">
+
+    <!--DATE(gmt_create) 就会去掉时分秒了。gmt_create这个字段是带时分秒的，我们用DATE转为不带时分秒只有日期-->
+    <select id="selectRegisterNumByDay" resultType="java.lang.Integer">
+        SELECT COUNT(1)
+        FROM ucenter_member
+        WHERE DATE(gmt_create) = #{day}
+    </select>
+</mapper>
